@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Salary Calculator</title>
+    <script src="vendors/jquery-3.2.1.min.js"></script>
+    <script src="scripts/scripts2.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <h1>Salary Cost Calculator</h1>
+    </header>
+    <main>
+        <section id="employee-data">
+            <p>Please enter employee information below:</p>
+            <br />
+            <input class="input" type="text" placeholder="First Name" id="firstIn" />
+            <br />
+            <input class="input" type="text" placeholder="Last Name" id="lastIn" />
+            <br />
+            <input class="input" type="text" placeholder="ID Number" id="idIn" />
+            <br />
+            <input class="input" type="text" placeholder="Job Title" id="titleIn" />
+            <br />
+            <input class="input" type="number" placeholder="Annual Salary" id="salaryIn" />
+            <br />
+            <button id="submitButton">Submit</button>
+        </section>
+        <section id="cost-data">
+            <h3>Total Monthly Salary Costs</h3>
+            <p>$<span class=total></span></p>
+        </section>
+        <section id="employee-display">
+            <table>
+            </table>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
