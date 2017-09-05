@@ -14,16 +14,16 @@ var monthlyTotals = 0;
 //get user input
 
 function enterEmployee () {
-    var newEmployee = new Employee()
+    var newEmployee = new Employee($('#firstnameIn').val(),
+        $('#lastnameIn').val(),
+        $('#idnumberIn').val(),
+        $('#jobtitleIn').val(),
+        $('#annualsalaryIn').val() )
+
+   
     
-    employees.push( this )
 salaryTotals += Number(newEmployee.annualsalary);
 monthlyTotals = Math.round(salaryTotals / 12);
- $( '#firstnameIn' ).val(),
- $( '#lastnameIn' ).val(), 
- $( '#idnumberIn' ).val(), 
- $( '#jobtitleIn' ).val(), 
- $( '#annualsalaryIn' ).val() 
 
 //append
     //$('#employeeCostsSection').html(monthlyTotals);
@@ -32,7 +32,7 @@ monthlyTotals = Math.round(salaryTotals / 12);
         '<br>ID Number: '  + $('#idnumberIn').val() + 
         '<br>Job Title: ' + $('#jobtitleIn').val() +
         '<br>Annual Salary: ' + $('#annualsalaryIn').val() +
-        '<br>Monthly Cost: ' + $('#monthlyTotals').val() + '</p>'
+        '<br>Monthly Cost: ' + (monthlyTotals) + '</p>'
     );
         //reset inpus
     $('#firstnameIn').val('');
@@ -54,9 +54,9 @@ function Employee (firstnameIn, lastnameIn, idnumberIn, jobtitleIn, annualsalary
     this.idnumber = idnumberIn;
     this.jobtitle = jobtitleIn;
     this.annualsalary = annualsalaryIn;
-
+    this.monthlyTotals = (annualsalaryIn / 12);
   
-
+    employees.push(this)
    //console.log(employees[0].annualsalary);
 } //end Emoloyee constructor and employees.push
 
